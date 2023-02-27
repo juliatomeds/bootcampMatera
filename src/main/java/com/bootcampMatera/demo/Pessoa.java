@@ -5,4 +5,24 @@ public class Pessoa {
     private String cpf;
     private String nome;
     private int idade;
+
+    public void getCpf (){
+        return cpf;
+    }
+
+    public void getNome (){
+        return this.nome;
+    }
+
+    public void getIdade (){
+        return this.idade;
+    }
+
+    public void setCpf (String cpf){
+        this.cpf = cpf;
+    }
+
+    public void setNome(String umNome){
+        nome = umNome;
+    }
 }
