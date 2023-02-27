@@ -6,34 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BootcampMateraApplication {
 
-	public static void main(String[] args) {
-		boolean isOk = false;
-		double numeroDouble = 10.2;
-		long numeroLong = 10L;
-		long nomeVariavel = 5L;
-		var nome = "Júlia";
-		int idade = 15;
+    public static void main(String[] args) {
+        var pessoa = new Pessoa("Júlia do Teste", "12345678912", 20);
+        var pessoa2 = new Pessoa("Júlia do Teste 2", "2324434434", 12);
 
-		if (idade >= 18){
-			System.out.println("Pode beber");
-		} else{
-			System.out.println("Não deveria beber");
-		}
+        System.out.println("Primeira Pessoa = " + pessoa.getNome());
+        System.out.println("Segunda Pessoa  = " + pessoa2.getNome());
+    }
 
-		boolean podeBeber = idade >= 18;
-		System.out.println(podeBeber);
-
-		while (idade < 18){
-			System.out.println("Não deveria dirigir, idade: " + idade);
-			idade = idade +1;
-		}
-		System.out.println("fim");
-
-		for (int i = 0; i< 18; i++){
-			System.out.println("valor de i = " + i);
-		}
-
-		SpringApplication.run(BootcampMateraApplication.class, args);
-	}
-
-}
+    }
